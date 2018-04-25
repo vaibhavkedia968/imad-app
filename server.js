@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles= {
-    'article-One': {
+    'article-one': {
         title: 'Article One | Vaibhav Kedia',
         heading : 'Article One',
         date: 'Apr 24, 2018',
@@ -19,7 +19,7 @@ var articles= {
                         This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
                     </p>`
     },
-    'article-Two': {
+    'article-two': {
         title: 'Article Two | Vaibhav Kedia',
         heading: 'Article Two',
         date: 'Apr 25, 2018',
@@ -36,7 +36,7 @@ var articles= {
                          Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
                      </p>`
     },
-    'article-Three': {
+    'article-three': {
         title: 'Article Three | Vaibhav Kedia',
         heading: 'Article Three',
         date: 'Apr 26, 2018',
