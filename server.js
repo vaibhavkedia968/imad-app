@@ -37,6 +37,17 @@ var articleTwo={
                      Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
                  </p>`
 }
+var articleThree={
+    title: 'Article Three | Vaibhav Kedia',
+    heading: 'Article Three',
+    date: 'Apr 25, 2018',
+    content: ` <p>
+                Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
+                </p>
+                <p>
+                Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
+                </p>`
+}
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
