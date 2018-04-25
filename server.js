@@ -4,50 +4,50 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
-var articleOne={
-    title: 'Article One | Vaibhav Kedia',
-    heading : 'Article One',
-    date: 'Apr 24, 2018',
-    content: ` <p>
-                    This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
-                </p>
-                <p>
-                    This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
-                </p>
-                <p>
-                    This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
-                </p>`
-}
-
-var articleTwo={
-    title: 'Article Two | Vaibhav Kedia',
-    heading: 'Article Two',
-    date: 'Apr 25, 2018',
-    content: ` <p>
-                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
-                 </p>
-                 <p>
-                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
-                 </p>
-                 <p>
-                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
-                 </p>
-                 <p>
-                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
-                 </p>`
-}
-var articleThree={
-    title: 'Article Three | Vaibhav Kedia',
-    heading: 'Article Three',
-    date: 'Apr 25, 2018',
-    content: ` <p>
-                Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
-                </p>
-                <p>
-                Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
-                </p>`
-}
+var articles= {
+    'article-One': {
+        title: 'Article One | Vaibhav Kedia',
+        heading : 'Article One',
+        date: 'Apr 24, 2018',
+        content: ` <p>
+                        This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
+                    </p>
+                    <p>
+                        This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
+                    </p>
+                    <p>
+                        This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.This is the content for article one.
+                    </p>`
+    },
+    'article-Two': {
+        title: 'Article Two | Vaibhav Kedia',
+        heading: 'Article Two',
+        date: 'Apr 25, 2018',
+        content: ` <p>
+                         Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                     </p>
+                     <p>
+                         Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                     </p>
+                     <p>
+                         Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                     </p>
+                     <p>
+                         Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                     </p>`
+    },
+    'article-Three': {
+        title: 'Article Three | Vaibhav Kedia',
+        heading: 'Article Three',
+        date: 'Apr 26, 2018',
+        content: ` <p>
+                    Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
+                    </p>
+                    <p>
+                    Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. Content Article Three. 
+                    </p>`
+    }
+};
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -87,17 +87,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-  res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two',function(req,res){
-  res.send(createTemplate(articleTwo));
-});
-
-app.get('/article-three',function(req,res){
-   res.send(createTemplate(articleThree));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
