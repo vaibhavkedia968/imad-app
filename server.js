@@ -20,6 +20,23 @@ var articleOne={
                 </p>`
 }
 
+var articleTwo={
+    title: 'Article Two | Vaibhav Kedia',
+    heading: 'Article Two',
+    date: 'Apr 25, 2018',
+    content: ` <p>
+                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                 </p>
+                 <p>
+                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                 </p>
+                 <p>
+                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                 </p>
+                 <p>
+                     Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. Article two content. 
+                 </p>`
+}
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -64,7 +81,7 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+  res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three',function(req,res){
